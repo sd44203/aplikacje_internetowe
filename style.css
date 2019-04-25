@@ -7,7 +7,7 @@ html,body{
     padding:0;
 }
 .container{
-    background-color:black;
+    background-color:rgb(37, 37, 37);
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr;

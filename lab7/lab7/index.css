@@ -1,0 +1,30 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+#pojemnik{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    width: 50%;
+    height: 80%;
+    margin: 20px auto 0;
+    font: normal 28pt sans-serif;
+    background-color: orange;
+    color: white;
+    grid-gap: 3px;
+    padding: 3px;
+}
+#pojemnik > div{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -moz-user-select:none;
+}
+#pojemnik > div:hover{
+    background-color: gray;
+}
