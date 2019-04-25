@@ -12,7 +12,7 @@ const tablica =
         { text: 7, col: 1, row: 2 },
         { text: 8, col: 2, row: 2 },
         { text: 9, col: 3, row: 2 },
-        { text: 'C', col: 4, row: 2 },
+        { text: 'c', col: 4, row: 2 },
         { text: 'Display', col: '1/5', row: 1 },
         { text: '=', col: 4, row: 5 },
         { text: '.', col: 3, row: 5 }
@@ -24,7 +24,7 @@ const handlclick = ev => {
     const disp = document.getElementById('Display');
     const key = ev.target.textContent;
     switch (key) {
-        case 'C':
+        case 'c':
             clearflag = false;
             memory = 0;
             op = 0;
@@ -40,7 +40,7 @@ const handlclick = ev => {
                 memory += op * parseFloat(disp.textContent);
             }
             op = key === '+' ? 1 : -1;
-            clearflag = false;
+            clearflag = true;
             break;
 
 
@@ -60,7 +60,7 @@ const handlclick = ev => {
             if (key === '.' && disp.textContent.includes('.')) return;
             if (key !== ('.') && disp.textContent === '0' || clearflag) {
                 disp.textContent = key;
-                clearflag = true;
+                clearflag = false;
             }
             else {
                 disp.textContent += key;
